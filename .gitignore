@@ -1,0 +1,22 @@
+# Package Files #
+*.jar
+*.war
+*.ear
+
+#忽略所有.svn目录
+.svn/
+#忽略所有target目录
+.target/
+#忽略所有.idea目录
+.idea/
+#忽略所有.iml文件
+*.iml
+
+.idea/google-java-format.xml
+.idea/inspectionProfiles/
+.idea/markdown-doclet.xml
+.idea/misc.xml
+.idea/vcs.xml
+.idea/workspace.xml
+spring-cloud-2022.iml
+src/
