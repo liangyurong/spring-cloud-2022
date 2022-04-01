@@ -1,0 +1,39 @@
+server:
+    port: 8003
+
+mybatis:
+    type-aliases-package: com.demo.springcloud.pojo # 取spring-cloud-api模块的pojo
+    cache-enabled: true # 开启二级缓存
+    mapper-locations: classpath:mybatis/mapper/*.xml
+
+# spring的配置
+spring:
+    application:
+        name: spring-cloud-provider-dept # 该名称会显示在eureka监控页面
+    datasource:
+        type: com.alibaba.druid.pool.DruidDataSource # 数据源
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/db03?useUnicode=true&characterEncoding=utf-8
+        username: root
+        password: 123456
+
+# eureka:
+eureka:
+    client:
+        service-url:
+            defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/ # 将服务注册到三个eureka服务
+    instance:
+        instance-id: spring-cloud-provider-dept-8003 # 修改eureka上的默认描述（也就是监控页面中的Status字段描述）
+
+# info信息，可以让别人看到我们这些微服务是干嘛的
+info:
+    app.name: yurong333-spring-cloud
+    company.name: yurong-company
+
+
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+
+
+1、启动EurekaServer_7001
+
+2、DeptProvider_Hystrix_8001
+
+3、启动ZuulApplication_9527
+
+开启之后，访问：http://eureka7001.com:7001/ ， 发现有两个服务注册嘞
+    1、UP (1) - spring-cloud-provider-dept-hystrix-8001
+    2、UP (1) - zuul9527.com
+
+
+=====================================
+
+访问：http://localhost:8001/dept/get/2 ， 能得到数据。
+
+访问：http://www.kuangstudy.com:9527/spring-cloud-provider-dept/dept/get/1， 也能得到数据，并且走了zuul
+
+===================================
+
+使用访问：http://www.kuangstudy.com:9527/mydept/dept/get/1
+
+# 隐藏spring-cloud-provider-dept这个微服务名称
+zuul:
+    routes:
+        mydept.serviceId: spring-cloud-provider-dept # mydept.serverId是自定义命名
+        mydept.path: /mydept/** # mydept代替了spring-cloud-provider-dept
+
+=====================================
+
+添加访问前缀
+
+# 路由网关设置：隐藏spring-cloud-provider-dept这个微服务名称
+zuul:
+    prefix: /kuang # 设置公共的前缀
+
+访问：http://www.kuangstudy.com:9527/kuang/mydept/dept/get/2

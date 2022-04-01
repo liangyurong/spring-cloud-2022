@@ -1,0 +1,32 @@
+server:
+    port: 9527
+
+# 该Zuul微服务的名称
+spring:
+    application:
+        name: spring-cloud-zuul-gateway
+
+
+# 路由网关设置：隐藏spring-cloud-provider-dept这个微服务名称
+zuul:
+    routes:
+        mydept.serviceId: spring-cloud-provider-dept # mydept.serverId是自定义命名
+        mydept.path: /mydept/** # mydept代替了spring-cloud-provider-dept
+    ignored-services: spring-cloud-provider-dept # 不能再使用该路径访问
+    prefix: /kuang # 设置公共的前缀
+
+# 将该zuul服务注册到三个集群。这样子zuul就可以在三个eureka发现其他的服务了
+eureka:
+    client:
+        service-url:
+            defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/ # 将服务注册到三个eureka服务
+    instance:
+        instance-id: zuul9527.com   # 修改eureka上的默认描述（也就是监控页面中的Status字段描述）
+        prefer-ip-address: true     # 注册服务的时候使用ip地址，ip地址从host里面找。
+
+# info信息，可以让别人看到我们这些微服务是干嘛的
+info:
+    app.name: yurong333-spring-cloud
+    company.name: yurong-company
+
+

@@ -1,0 +1,12 @@
+
+
+启动项目
+    1、spring-cloud-consumer-dept-feign
+    2、spring-cloud-eureka-7001
+    3、spring-cloud-provider-dept-8001
+
+访问：http://localhost:9090/consumer/dept/get/1 ， 可以得到正常信息
+
+服务降级，关闭spring-cloud-provider-dept-8001
+
+再访问：http://localhost:9090/consumer/dept/get/1 , 得到提示："客户端提供了降级的信息，现在这个服务已经被关闭"

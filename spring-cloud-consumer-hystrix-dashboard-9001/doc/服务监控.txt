@@ -1,0 +1,27 @@
+
+启动之后访问：http://localhost:9001/hystrix ， 可以看到监控页面
+
+备注：要配置熔断服务之后的才能被监控到，比如DeptProvider_Hystrix_8001。而spring-cloud-provider-dept-8001是无法被监控到的
+
+步骤
+
+    1、启动DeptProvider_Hystrix_8001之前，需要在启动类添加一个Servlet的Bean - 消费者
+
+    2、启动DeptConsumerDashboard_9001 - 监控
+
+    3、启动EurekaServer_7001 - 服务注册中心
+
+
+DeptProvider_Hystrix_8001类的项目，需要在pom文件完善监控信息
+            <!-- 查看eureka监控信息 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-actuator</artifactId>
+            </dependency>
+
+
+操作
+
+    1、进入http://localhost:9001/hystrix/monitor?stream=http%3A%2F%2Flocalhost%3A8001%2Factuator%2Fhystrix.stream&title=de，
+    2、一直去请求：http://localhost:8001/dept/get/2，会发现心跳越来越大
+    3、同时：http://localhost:8001/actuator/hystrix.stream ， 也会有ping得出数据

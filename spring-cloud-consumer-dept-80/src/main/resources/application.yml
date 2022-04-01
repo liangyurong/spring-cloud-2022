@@ -1,0 +1,15 @@
+server:
+    port: 9090
+
+# eureka
+eureka:
+    client:
+        register-with-eureka: false # 不向eureka中注册自己
+        fetch-registry: true # false表示自己是一个注册中心,TRUE表示自己不是注册中心
+        service-url:
+            # 客户端可以从三个地方去取
+            defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+
+
+
+
