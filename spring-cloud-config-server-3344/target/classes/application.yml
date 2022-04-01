@@ -1,0 +1,17 @@
+server:
+    port: 3344
+
+spring:
+    application:
+        name:  spring-cloud-config-server-3344
+    cloud:
+        config:
+            server:
+                git:
+                    uri: https://github.com/liangyurong/spring-cloud-2022.git # https
+
+
+
+
+
+

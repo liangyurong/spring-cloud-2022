@@ -25,8 +25,9 @@
         <module>spring-cloud-provider-dept-8003</module>
         <module>spring-cloud-consumer-dept-feign</module>
         <module>spring-cloud-provider-dept-hystrix-8001</module>
-        <module>spring-cloud-consumer-hystrix-dashboard</module>
+        <module>spring-cloud-consumer-hystrix-dashboard-9001</module>
         <module>spring-cloud-zuul-9527</module>
+        <module>spring-cloud-config-server-3344</module>
     </modules>
 
     <!-- 打包方式 pom -->
