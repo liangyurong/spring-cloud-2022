@@ -7,3 +7,6 @@
                 <version>2.1.1.RELEASE</version>
             </dependency>
 
+启动ConfigServer_3344类
+
+访问：http://localhost:3344/application-test.yml ， 读取到配置
