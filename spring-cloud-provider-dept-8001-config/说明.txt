@@ -11,7 +11,8 @@
 
 2、访问：http://localhost:7001/ ， 发现服务已经注册进来
 
-
 3、访问：http://localhost:8001/dept/get/1
+
+4、访问：http://localhost:8001/dept/discovery 。 能拿到数据
 
 
