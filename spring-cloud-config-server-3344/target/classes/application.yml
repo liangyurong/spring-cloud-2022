@@ -4,6 +4,7 @@ server:
 spring:
     application:
         name:  spring-cloud-config-server-3344
+    # 通过config-server，可以连接到远程仓库
     cloud:
         config:
             server:

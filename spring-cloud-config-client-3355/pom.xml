@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-cloud-config-server-3344</artifactId>
+    <artifactId>spring-cloud-config-client-3355</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -18,18 +18,17 @@
 
     <dependencies>
 
-        <!-- config 服务端配置 -->
+        <!-- 客户端配置-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
-            <version>2.1.1.RELEASE</version>
+            <artifactId>spring-cloud-config-client</artifactId>
+            <version>2.2.8.RELEASE</version>
         </dependency>
 
         <!-- web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>2.4.5</version>
         </dependency>
 
         <!-- 查看eureka监控信息 -->

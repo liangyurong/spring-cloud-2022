@@ -10,3 +10,5 @@
 启动ConfigServer_3344类
 
 访问：http://localhost:3344/application-test.yml ， 读取到配置
+
+访问：http://localhost:3344/master/application-dev.yml，读取到配置

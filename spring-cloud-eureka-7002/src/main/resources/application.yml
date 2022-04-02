@@ -1,7 +1,7 @@
 server:
     port: 7002
 
-# Eureka配置：服务注册到注册中心
+# 注册中心
 eureka:
     instance:
         hostname: eureka7002.com # 服务端的实例名称

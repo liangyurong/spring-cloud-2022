@@ -1,0 +1,30 @@
+bootstrap.yml是系统级别的配置
+
+application.yml是用户级别的配置
+
+
+1、启动3344项目
+
+2、访问：http://localhost:3344/master/application-dev.yml 。 得到如下
+
+    spring:
+      application:
+        name: spring-cloud-config-dev
+      profiles:
+        active: dev
+
+3、访问：http://localhost:3344/master/config-client-dev.yml ， 得到如下
+
+    eureka:
+      client:
+        service-url:
+          defaultZone: http://eureka7001.com:7001/eureka/
+    server:
+      port: 8201
+    spring:
+      application:
+        name: spring-cloud-provider-dept
+      profiles:
+        active: dev
+
+4、确保客户端能和3344连通，访问：

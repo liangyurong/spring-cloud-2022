@@ -1,7 +1,7 @@
 server:
     port: 7001
 
-# Eureka配置：服务注册到注册中心
+# 注册中心
 eureka:
     instance:
         hostname: eureka7001.com # 服务端的实例名称
@@ -12,16 +12,3 @@ eureka:
             # 单机这么写：http://${eureka.instance.hostname}:${server.port}/eureka/
             # 集群这么写：把其他的服务写进来就可以，不用写自己的
             defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
-
-
-
-
-
-
-
-
-
-
-
-
-

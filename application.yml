@@ -2,14 +2,14 @@ spring:
     profiles:
         active: dev
 ---
-
+# spring配置
 spring:
     profiles: dev
     application:
         name: spring-cloud-config-dev
 
 ---
-
+# spring配置
 spring:
     profiles: test
     application:
