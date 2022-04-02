@@ -29,7 +29,7 @@ eureka:
         service-url:
             defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/ # 将服务注册到三个eureka服务
     instance:
-        instance-id: spring-cloud-provider-dept-8001 # 修改eureka上的默认描述（也就是监控页面中的Status字段描述）
+        instance-id: spring-cloud-provider-dept-8001-config-dev # 修改eureka上的默认描述（也就是监控页面中的Status字段描述）
 
 # info信息，可以让别人看到我们这些微服务是干嘛的
 info:
@@ -62,7 +62,7 @@ eureka:
         service-url:
             defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/ # 将服务注册到三个eureka服务
     instance:
-        instance-id: spring-cloud-provider-dept-8001 # 修改eureka上的默认描述（也就是监控页面中的Status字段描述）
+        instance-id: spring-cloud-provider-dept-8001-config-test # 修改eureka上的默认描述（也就是监控页面中的Status字段描述）
 
 # info信息，可以让别人看到我们这些微服务是干嘛的
 info:
