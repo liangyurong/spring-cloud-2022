@@ -18,7 +18,7 @@ spring:
     datasource:
         druid:
             driver-class-name: com.mysql.cj.jdbc.Driver
-            url: jdbc:mysql://localhost:3306/db01?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&serverTimezone=GMT%2B8 # 假设db02是test数据库
+            url: jdbc:mysql://localhost:3306/db01?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&serverTimezone=GMT%2B8&useSSL=false # 假设db02是test数据库
             username: root
             password: 123456
 # 注册到注册中心
@@ -35,6 +35,7 @@ info:
     company.name: yurong-company
 
 ---
+
 # 端口
 server:
     port: 8001
@@ -51,7 +52,7 @@ spring:
     datasource:
         druid:
             driver-class-name: com.mysql.cj.jdbc.Driver
-            url: jdbc:mysql://localhost:3306/db01?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&serverTimezone=GMT%2B8 # 假设db02是test数据库
+            url: jdbc:mysql://localhost:3306/db01?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&serverTimezone=GMT%2B8&useSSL=false # 假设db02是test数据库
             username: root
             password: 123456
 # 注册到注册中心
