@@ -9,7 +9,7 @@ server:
     port: 8001
 # mybatis
 mybatis:
-    type-aliases-package: com.demo.springcloud.pojo # 取spring-cloud-api模块的pojo
+    type-aliases-package: com.kuang.springcloud.pojo # 取spring-cloud-api模块的pojo
     cache-enabled: true # 开启二级缓存
     mapper-locations: classpath:mybatis/mapper/*.xml
 # spring的配置
@@ -42,7 +42,7 @@ server:
     port: 8001
 # mybatis
 mybatis:
-    type-aliases-package: com.demo.springcloud.pojo  # 取spring-cloud-api模块的pojo
+    type-aliases-package: com.kuang.springcloud.pojo  # 取spring-cloud-api模块的pojo
     cache-enabled: true # 开启二级缓存
     mapper-locations: classpath:mybatis/mapper/*.xml
 # spring的配置

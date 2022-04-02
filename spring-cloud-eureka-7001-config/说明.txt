@@ -1,0 +1,26 @@
+
+1、启动EurekaServer_config_7001
+
+2、启动ConfigServer_3344
+
+3、访问本地：http://localhost:3344/master/config-eureka-dev.yml
+
+    eureka:
+      client:
+        fetch-registry: false
+        register-with-eureka: false
+        service-url:
+          defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+      instance:
+        hostname: eureka7001.com
+    server:
+      port: 7001
+    spring:
+      application:
+        name: spring-cloud-config-eureka-dev
+      profiles:
+        active: dev
+
+4、访问：http://localhost:7001/
+
+    能显示页面，说明项目已经生效

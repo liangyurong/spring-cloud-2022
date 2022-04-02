@@ -1,0 +1,3 @@
+spring:
+    application:
+        name:  spring-cloud-provider-dept-8001-config

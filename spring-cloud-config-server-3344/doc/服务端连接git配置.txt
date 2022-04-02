@@ -12,3 +12,7 @@
 访问：http://localhost:3344/application-test.yml ， 读取到配置
 
 访问：http://localhost:3344/master/application-dev.yml，读取到配置
+
+======================
+
+该3344项目是连接到git的，并且读取yml文件配置
