@@ -8,7 +8,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 
 
 @SpringBootApplication
-@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class}) // 忽略数据库配置
+//@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class}) // 忽略数据库配置
 @EnableConfigServer
 public class ConfigServer_3344 {
 
