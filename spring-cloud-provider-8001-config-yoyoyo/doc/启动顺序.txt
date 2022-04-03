@@ -1,0 +1,19 @@
+
+1、导入config依赖
+
+        <!--config依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+            <version>2.1.1.RELEASE</version>
+        </dependency>
+
+2、编写访问云端配置的yml文件
+
+3、启动项目
+
+    3344项目、3355项目、EurekaServer_7001、DeptProvider_8001_config_yo
+
+4、访问：http://localhost:8001/dept/get/1
+
+    得到数据

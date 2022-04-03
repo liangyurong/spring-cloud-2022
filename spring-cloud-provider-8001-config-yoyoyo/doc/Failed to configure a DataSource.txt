@@ -11,4 +11,16 @@ p21的是把数据源的配置都放到了远程git仓库。然后我这里把�
 
 ### 解决
 
-3344里面的确会报其他服务来获取远程配置时失败的具体错误
+3344的数据库配置
+
+# spring的配置
+spring:
+    profiles: test
+    application:
+        name: spring-cloud-provider-dept-config-test # 该名称会显示在eureka监控页面
+    datasource:
+        type: com.alibaba.druid.pool.DruidDataSource # 数据源
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/db01?useUnicode=true&characterEncoding=utf-8
+        username: root
+        password: 123456
